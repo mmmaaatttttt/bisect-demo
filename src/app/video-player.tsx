@@ -17,7 +17,7 @@ export default function VideoPlayer({
   return (
     <div className={hidden ? styles.hidden : ""}>
       <YouTube
-        videoId="KXJSjte_OAI"
+        videoId="dQw4w9WgXcQ"
         opts={opts}
         onReady={onReady}
         onError={onError}
