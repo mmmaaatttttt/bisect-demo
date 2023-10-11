@@ -19,7 +19,7 @@ export default function Home() {
     <main className={styles.main}>
       {!playing && (
         <button onClick={() => setPlaying(true)} className={styles.button}>
-          do not press me
+          Do not press me!
         </button>
       )}
       <VideoPlayer
