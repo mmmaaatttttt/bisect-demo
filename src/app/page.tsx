@@ -10,7 +10,7 @@ export default function Home() {
   const [playing, setPlaying] = useState(false);
 
   useEffect(() => {
-    if (player && playing) {
+    if (player) {
       player.playVideo();
     }
   }, [player, playing]);
