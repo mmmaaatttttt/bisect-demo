@@ -1,19 +1,27 @@
 "use client";
-
+import styles from "./page.module.css";
 import YouTube, { YouTubeProps } from "react-youtube";
 
-export default function VideoPlayer({ onError, onReady }: YouTubeProps) {
+type VideoPlayerProps = YouTubeProps & { hidden: boolean };
+
+export default function VideoPlayer({
+  hidden,
+  onError,
+  onReady,
+}: VideoPlayerProps) {
   const opts = {
     playerVars: {
       autoplay: 1,
     },
   };
   return (
-    <YouTube
-      videoId="KXJSjte_OAI"
-      opts={opts}
-      onReady={onReady}
-      onError={onError}
-    />
+    <div className={hidden ? styles.hidden : ""}>
+      <YouTube
+        videoId="KXJSjte_OAI"
+        opts={opts}
+        onReady={onReady}
+        onError={onError}
+      />
+    </div>
   );
 }
