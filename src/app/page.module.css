@@ -17,3 +17,7 @@
   width: 18rem;
   height: 18rem;
 }
+
+.hidden {
+  opacity: 0;
+}
